@@ -16,7 +16,7 @@ export function useMovies(query,KEY) {
           const controller = new AbortController();
           try {
             res = await fetch(
-              `http://www.omdbapi.com/?s=${query}&apikey=${KEY}`,
+              `https://www.omdbapi.com/?s=${query}&apikey=${KEY}`,
               { signal: controller.signal }
             );
           } catch (err) {
